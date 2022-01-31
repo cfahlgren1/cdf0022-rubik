@@ -28,9 +28,7 @@ def _check(parms):
         result['status'] = 'error: no value present'
     elif(not isinstance(encodedCube, str)):
         result['status'] = 'error: value is of wrong type'
-    elif(len(encodedCube) != 54):
-        result['status'] = 'error: incorrect character count'
-    elif(not has_correct_colors(encodedCube)):
+    elif(len(encodedCube) != 54 or not has_correct_colors(encodedCube)):
         result['status'] = 'error: incorrect character count'
     else:
         result['status'] = 'ok'
